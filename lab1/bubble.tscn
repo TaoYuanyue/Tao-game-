@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvhmmsa7dupb4"]
+
+[ext_resource type="Texture2D" uid="uid://b4yn0j7l7abcd" path="res://pixel-art-soap-speech-bubble-png.png" id="1_nxyyh"]
+
+[node name="bubble" type="Node2D"]
+
+[node name="bubble" type="Sprite2D" parent="."]
+modulate = Color(0.164706, 1, 1, 1)
+position = Vector2(31, 28)
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("1_nxyyh")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmcj0x10b8nrx"]
+
+[ext_resource type="Texture2D" uid="uid://cna8u0yt6meqv" path="res://clown-fish.png" id="1_0ckc1"]
+[ext_resource type="PackedScene" uid="uid://dvhmmsa7dupb4" path="res://bubble.tscn" id="2_xul34"]
+
+[node name="clown fish" type="Node2D"]
+
+[node name="Clown-fish" type="Sprite2D" parent="."]
+position = Vector2(2, 1)
+scale = Vector2(0.49375, 0.49375)
+texture = ExtResource("1_0ckc1")
+
+[node name="bubble" parent="." instance=ExtResource("2_xul34")]
+position = Vector2(5, 116)
+
+[node name="bubble2" parent="." instance=ExtResource("2_xul34")]
+position = Vector2(200, 75)
+
+[node name="bubble3" parent="." instance=ExtResource("2_xul34")]
+position = Vector2(109, -3)

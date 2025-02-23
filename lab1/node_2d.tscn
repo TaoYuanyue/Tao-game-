@@ -1,15 +1,35 @@
 [gd_scene load_steps=3 format=3 uid="uid://h4k3g48v44yc"]
 
-[ext_resource type="Texture2D" uid="uid://cna8u0yt6meqv" path="res://clown-fish.png" id="1_q5vlh"]
+[ext_resource type="PackedScene" uid="uid://dmcj0x10b8nrx" path="res://clown fish new scene.tscn" id="2_1ce7d"]
 [ext_resource type="Texture2D" uid="uid://cy7kww3imekgj" path="res://pixel-art-deep-sea-jellyfish-png.png" id="2_muasn"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Clown-fish" type="Sprite2D" parent="."]
-position = Vector2(728, 335)
-texture = ExtResource("1_q5vlh")
-
 [node name="jellyfish1" type="Sprite2D" parent="."]
-position = Vector2(235, 409)
-scale = Vector2(0.65, 0.65)
+modulate = Color(0.952941, 0.760784, 0.94902, 1)
+position = Vector2(153, 299)
+scale = Vector2(0.4025, 0.4025)
 texture = ExtResource("2_muasn")
+
+[node name="jellyfish2" type="Sprite2D" parent="."]
+modulate = Color(0.522623, 1, 0.591021, 1)
+position = Vector2(825, 228)
+scale = Vector2(0.31125, 0.31125)
+texture = ExtResource("2_muasn")
+
+[node name="jellyfish3" type="Sprite2D" parent="."]
+position = Vector2(401.75, 118.75)
+scale = Vector2(0.30125, 0.30125)
+texture = ExtResource("2_muasn")
+
+[node name="clown fish" parent="." instance=ExtResource("2_1ce7d")]
+position = Vector2(160, 415)
+
+[node name="clown fish2" parent="." instance=ExtResource("2_1ce7d")]
+position = Vector2(317, 118)
+
+[node name="clown fish3" parent="." instance=ExtResource("2_1ce7d")]
+position = Vector2(793, 412)
+
+[node name="clown fish4" parent="." instance=ExtResource("2_1ce7d")]
+position = Vector2(616, 161)

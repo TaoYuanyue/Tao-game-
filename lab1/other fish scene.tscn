@@ -11,13 +11,12 @@ texture = ExtResource("1_12ym1")
 
 [node name="Anchovy2" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 0, 1)
-position = Vector2(416, 213)
-scale = Vector2(-0.0949717, 0.103274)
+position = Vector2(429.382, 226.189)
+scale = Vector2(-0.11492, 0.124966)
 skew = 0.00174533
 texture = ExtResource("1_12ym1")
 
 [node name="Anchovy3" type="Sprite2D" parent="."]
-modulate = Color(1, 0.372549, 0.992157, 1)
-position = Vector2(581, 91)
-scale = Vector2(0.0933388, 0.0933388)
+position = Vector2(514, 419)
+scale = Vector2(0.12315, 0.12315)
 texture = ExtResource("1_12ym1")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://h4k3g48v44yc"]
+
+[ext_resource type="Texture2D" uid="uid://cna8u0yt6meqv" path="res://clown-fish.png" id="1_q5vlh"]
+[ext_resource type="Texture2D" uid="uid://cy7kww3imekgj" path="res://pixel-art-deep-sea-jellyfish-png.png" id="2_muasn"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Clown-fish" type="Sprite2D" parent="."]
+position = Vector2(728, 335)
+texture = ExtResource("1_q5vlh")
+
+[node name="jellyfish1" type="Sprite2D" parent="."]
+position = Vector2(235, 409)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_muasn")

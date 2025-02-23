@@ -15,6 +15,3 @@ position = Vector2(5, 116)
 
 [node name="bubble2" parent="." instance=ExtResource("2_xul34")]
 position = Vector2(200, 75)
-
-[node name="bubble3" parent="." instance=ExtResource("2_xul34")]
-position = Vector2(109, -3)

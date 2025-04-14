@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr3v65rfpiiqg"]
+
+[ext_resource type="Script" path="res://character.gd" id="1_2fpsy"]
+[ext_resource type="Texture2D" uid="uid://ciis1taq20s0" path="res://88F7Rb9P6LuwRSybaHEYZvnPuRcwwNF-g1bRCta4WaFHr9vkqlfO_PjJYkzjCJKanXmupFtAOjbFDe8s_P7bMwqyZBhPMaZt0b2aYg.png" id="1_ealm2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4u8qy"]
+radius = 18.798
+height = 50.1282
+
+[node name="character" type="CharacterBody2D"]
+script = ExtResource("1_2fpsy")
+
+[node name="88f7Rb9p6LuwRSybaHeyZvnPuRcwwNf-g1bRCta4WaFHr9VkqlfOPjJYkzjCjKanXmupFtAOjbFDe8sP7bMwqyZBhPMaZt0b2aYg" type="Sprite2D" parent="."]
+position = Vector2(461.609, 175.166)
+scale = Vector2(-0.0513777, 0.0516884)
+texture = ExtResource("1_ealm2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(462, 175)
+scale = Vector2(0.319182, 0.309949)
+shape = SubResource("CapsuleShape2D_4u8qy")
+
+[node name="Dash_timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="dash_again_timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Dash_timer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="dash_again_timer" to="." method="_on_dash_again_timer_timeout"]

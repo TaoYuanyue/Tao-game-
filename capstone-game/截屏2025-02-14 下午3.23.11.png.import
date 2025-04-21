@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5u4f62tuf48h"
-valid=false
+uid="uid://bcaod1uwfdfnq"
+path="res://.godot/imported/截屏2025-02-14 下午3.23.11.png-4e45fb99e3baa0db84b0b7eacb35a715.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/candy land tiels - free version.png"
+source_file="res://截屏2025-02-14 下午3.23.11.png"
+dest_files=["res://.godot/imported/截屏2025-02-14 下午3.23.11.png-4e45fb99e3baa0db84b0b7eacb35a715.ctex"]
 
 [params]
 

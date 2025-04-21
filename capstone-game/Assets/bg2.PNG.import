@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5u4f62tuf48h"
-valid=false
+uid="uid://bf7fgc3v1f5s7"
+path="res://.godot/imported/bg2.PNG-3dd4e07c610f1e3bc396edd6f162e26f.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/candy land tiels - free version.png"
+source_file="res://Assets/bg2.PNG"
+dest_files=["res://.godot/imported/bg2.PNG-3dd4e07c610f1e3bc396edd6f162e26f.ctex"]
 
 [params]
 

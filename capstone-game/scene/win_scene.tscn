@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgof0qshw7klr"]
+
+[ext_resource type="Texture2D" uid="uid://i2bseriw8h" path="res://Assets/bg3.PNG" id="1_8v5t3"]
+[ext_resource type="Texture2D" uid="uid://ck6pmswk2juxf" path="res://Assets/win.PNG" id="1_vcs7k"]
+
+[node name="Win scene" type="Node2D"]
+
+[node name="Bg3" type="Sprite2D" parent="."]
+modulate = Color(1, 0.933333, 0.929412, 1)
+position = Vector2(665, 323)
+scale = Vector2(0.445333, 0.445333)
+texture = ExtResource("1_8v5t3")
+
+[node name="Win" type="Sprite2D" parent="."]
+modulate = Color(1, 0.980392, 1, 1)
+position = Vector2(574, 307)
+scale = Vector2(0.309333, 0.309333)
+texture = ExtResource("1_vcs7k")

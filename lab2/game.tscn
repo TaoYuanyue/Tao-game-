@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=4 uid="uid://bwec51a8yek7t"]
+[gd_scene load_steps=10 format=4 uid="uid://bwec51a8yek7t"]
 
 [ext_resource type="PackedScene" uid="uid://cr3v65rfpiiqg" path="res://character.tscn" id="1_ckjme"]
 [ext_resource type="Texture2D" uid="uid://cpkhw75ksw0s2" path="res://day background.png" id="1_o677f"]
+[ext_resource type="Script" path="res://kill_box.gd" id="1_tynlg"]
 [ext_resource type="Texture2D" uid="uid://b5t3siwgsftg2" path="res://candy land tiels - free version.png" id="2_yhug3"]
+[ext_resource type="PackedScene" uid="uid://c4npfaa12ixwu" path="res://door.tscn" id="5_wb47g"]
+[ext_resource type="PackedScene" uid="uid://c11f2bm5gwo2" path="res://win sceen.tscn" id="6_au63p"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hcrtn"]
-distance = -190.0
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mf8pl"]
+distance = -638.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6oy15"]
 texture = ExtResource("2_yhug3")
@@ -76,6 +79,12 @@ sources/3 = SubResource("TileSetAtlasSource_6oy15")
 
 [node name="Node2D" type="Node2D"]
 
+[node name="kill box" type="Area2D" parent="."]
+script = ExtResource("1_tynlg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kill box"]
+shape = SubResource("WorldBoundaryShape2D_mf8pl")
+
 [node name="DayBackground" type="Sprite2D" parent="."]
 position = Vector2(580.541, 320.5)
 scale = Vector2(0.251417, 0.274786)
@@ -89,14 +98,13 @@ position = Vector2(522, 167)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(2, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(4, 290)
-shape = SubResource("WorldBoundaryShape2D_hcrtn")
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(515, 308)
-tile_map_data = PackedByteArray("AAD9////AwACAAAAAAD9/wAAAwACAAEAAAD+////AwAAAAAAAAD+/wAAAwAAAAEAAAD/////AwABAAAAAAD//wAAAwABAAEAAAAAAP//AwACAAAAAAAAAAAAAwACAAEAAAD7////AwAAAAAAAAD7/wAAAwAAAAEAAAD7/wEAAwAAAAIAAAD8////AwABAAAAAAD8/wAAAwABAAEAAAD8/wEAAwABAAIAAAD9/wEAAwACAAIAAAD+/wEAAwAAAAIAAAD//wEAAwABAAIAAAAAAAEAAwACAAIAAAAIAP//AwAAAAMAAAAJAP//AwABAAMAAAAKAP//AwACAAMAAAALAP//AwADAAMAAAAOAP//AwADAAAAAAAOAAAAAwADAAEAAAAOAAEAAwADAAIAAAACAPz/AwAAAAAAAAACAP3/AwAAAAEAAAADAPz/AwABAAAAAAADAP3/AwABAAEAAAAEAPz/AwACAAAAAAAEAP3/AwACAAEAAAAFAPz/AwAAAAAAAAAFAP3/AwAAAAEAAAAGAPz/AwABAAAAAAAGAP3/AwABAAEAAAAHAPz/AwACAAAAAAAHAP3/AwACAAEAAAACAP7/AwAAAAIAAAADAP7/AwABAAIAAAAEAP7/AwACAAIAAAAFAP7/AwAAAAIAAAAGAP7/AwABAAIAAAAHAP7/AwACAAIAAAD5//v/AwAGAAAAAAD3//v/AwAEAAAAAAD3//z/AwAFAAEAAAD3//3/AwAEAAIAAAD3//7/AwAEAAMAAAD4//v/AwAFAAAAAAD4//z/AwAFAAEAAAD4//3/AwAFAAIAAAD5//z/AwAGAAEAAAD5//3/AwAGAAIAAAD6//v/AwAHAAAAAAD6//z/AwAHAAEAAAD6//3/AwAHAAIAAAD6//7/AwAHAAMAAAA=")
+tile_map_data = PackedByteArray("AAD9////AwACAAAAAAD9/wAAAwACAAEAAAD+////AwAAAAAAAAD+/wAAAwAAAAEAAAD/////AwABAAAAAAD//wAAAwABAAEAAAAAAP//AwACAAAAAAAAAAAAAwACAAEAAAD7////AwAAAAAAAAD7/wAAAwAAAAEAAAD7/wEAAwAAAAIAAAD8////AwABAAAAAAD8/wAAAwABAAEAAAD8/wEAAwABAAIAAAD9/wEAAwACAAIAAAD+/wEAAwAAAAIAAAD//wEAAwABAAIAAAAAAAEAAwACAAIAAAAIAP//AwAAAAMAAAAJAP//AwABAAMAAAAKAP//AwACAAMAAAALAP//AwADAAMAAAAOAP//AwADAAAAAAAOAAAAAwADAAEAAAAOAAEAAwADAAIAAAACAPz/AwAAAAAAAAACAP3/AwAAAAEAAAADAPz/AwABAAAAAAADAP3/AwABAAEAAAAEAPz/AwACAAAAAAAEAP3/AwACAAEAAAAFAPz/AwAAAAAAAAAFAP3/AwAAAAEAAAAGAPz/AwABAAAAAAAGAP3/AwABAAEAAAAHAPz/AwACAAAAAAAHAP3/AwACAAEAAAACAP7/AwAAAAIAAAADAP7/AwABAAIAAAAEAP7/AwACAAIAAAAFAP7/AwAAAAIAAAAGAP7/AwABAAIAAAAHAP7/AwACAAIAAAD5//v/AwAGAAAAAAD3//v/AwAEAAAAAAD3//z/AwAEAAEAAAD3//3/AwAEAAIAAAD3//7/AwAEAAMAAAD4//v/AwAFAAAAAAD4//z/AwAFAAEAAAD4//3/AwAFAAIAAAD5//z/AwAGAAEAAAD5//3/AwAGAAIAAAD6//v/AwAHAAAAAAD6//z/AwAHAAEAAAD6//3/AwAHAAIAAAD6//7/AwAHAAMAAAA=")
 tile_set = SubResource("TileSet_wbng6")
+
+[node name="door" parent="." instance=ExtResource("5_wb47g")]
+position = Vector2(719, 280)
+newsceen = ExtResource("6_au63p")
+
+[connection signal="body_entered" from="kill box" to="kill box" method="_on_body_entered"]

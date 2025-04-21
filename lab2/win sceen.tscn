@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c11f2bm5gwo2"]
+
+[ext_resource type="Texture2D" uid="uid://cpkhw75ksw0s2" path="res://day background.png" id="1_4k3ab"]
+[ext_resource type="Texture2D" uid="uid://d4aduuypqwt02" path="res://icon.svg" id="2_x8ypf"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="DayBackground" type="Sprite2D" parent="."]
+position = Vector2(634, 298)
+scale = Vector2(0.266667, 0.3)
+texture = ExtResource("1_4k3ab")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(475, 222)
+texture = ExtResource("2_x8ypf")

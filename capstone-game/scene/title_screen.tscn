@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3wd8hirwiums"]
+
+[ext_resource type="Script" path="res://title_screen.gd" id="1_qti2c"]
+[ext_resource type="Texture2D" uid="uid://1ghhif3m41t" path="res://Assets/IMG_5544.PNG" id="2_l8we3"]
+[ext_resource type="Texture2D" uid="uid://bresix01wx7a0" path="res://Assets/ui-start.PNG" id="2_ofarl"]
+[ext_resource type="Texture2D" uid="uid://br6x3g6o4fk8p" path="res://Assets/ui-rule.PNG" id="3_cy5e6"]
+[ext_resource type="Texture2D" uid="uid://c2oocaglss6pn" path="res://Assets/text-title.PNG" id="3_spm7m"]
+
+[node name="title screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -8.0
+offset_right = -7.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qti2c")
+
+[node name="StartButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 706.0
+offset_top = 338.0
+offset_right = 899.0
+offset_bottom = 401.0
+
+[node name="ruleButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 700.0
+offset_top = 441.0
+offset_right = 912.0
+offset_bottom = 501.0
+
+[node name="Img5544" type="Sprite2D" parent="."]
+modulate = Color(0.980392, 0.905882, 1, 1)
+position = Vector2(531, 328)
+scale = Vector2(0.434667, 0.434667)
+texture = ExtResource("2_l8we3")
+
+[node name="Text-title" type="Sprite2D" parent="."]
+position = Vector2(470.25, 349.125)
+scale = Vector2(0.4385, 0.4385)
+texture = ExtResource("3_spm7m")
+
+[node name="Ui-start" type="Sprite2D" parent="."]
+position = Vector2(499, 367)
+scale = Vector2(0.405333, 0.405333)
+texture = ExtResource("2_ofarl")
+
+[node name="Ui-rule" type="Sprite2D" parent="."]
+position = Vector2(503.562, 372.281)
+scale = Vector2(0.399625, 0.399625)
+texture = ExtResource("3_cy5e6")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="ruleButton" to="." method="_on_rule_button_pressed"]

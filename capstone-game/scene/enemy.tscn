@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhfk5msw8r4fq"]
+
+[ext_resource type="Texture2D" uid="uid://b8tpw0hln8rb2" path="res://Assets/enermy.PNG" id="1_rmkkn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7ys4"]
+size = Vector2(2783.61, 1796.02)
+
+[node name="enemy" type="CharacterBody2D" groups=["enemys"]]
+
+[node name="Enemy" type="Sprite2D" parent="."]
+modulate = Color(0.958176, 0.808377, 1, 1)
+position = Vector2(23.4715, 15.625)
+scale = Vector2(0.0334967, 0.0334967)
+texture = ExtResource("1_rmkkn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color(1, 0.686275, 0.988235, 1)
+position = Vector2(23, 16)
+scale = Vector2(0.0163399, 0.0163399)
+shape = SubResource("RectangleShape2D_o7ys4")

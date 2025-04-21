@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2518fhpqxex2"]
+
+[ext_resource type="Texture2D" uid="uid://1ghhif3m41t" path="res://Assets/IMG_5544.PNG" id="1_6edp3"]
+[ext_resource type="Script" path="res://rule_page.gd" id="1_fdrxf"]
+[ext_resource type="Texture2D" uid="uid://degpum6nrgvfp" path="res://Assets/rule book.PNG" id="2_0g7wt"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fdrxf")
+
+[node name="Img5544" type="Sprite2D" parent="."]
+modulate = Color(0.980392, 0.905882, 1, 1)
+position = Vector2(644, 318)
+scale = Vector2(0.434667, 0.434667)
+texture = ExtResource("1_6edp3")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1054.0
+offset_top = 3.0
+offset_right = 1146.0
+offset_bottom = 43.0
+
+[node name="RuleBook" type="Sprite2D" parent="."]
+modulate = Color(1, 0.952148, 0.999829, 1)
+position = Vector2(583, 342)
+scale = Vector2(0.661111, 0.661111)
+texture = ExtResource("2_0g7wt")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

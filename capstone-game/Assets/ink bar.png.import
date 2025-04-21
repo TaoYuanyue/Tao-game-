@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5u4f62tuf48h"
-valid=false
+uid="uid://cwl1j1yrtkm2l"
+path="res://.godot/imported/ink bar.png-9ec9189d5f137683f7c873ac1b863193.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/candy land tiels - free version.png"
+source_file="res://Assets/ink bar.png"
+dest_files=["res://.godot/imported/ink bar.png-9ec9189d5f137683f7c873ac1b863193.ctex"]
 
 [params]
 

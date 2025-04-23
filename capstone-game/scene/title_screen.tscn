@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c3wd8hirwiums"]
 
-[ext_resource type="Script" path="res://title_screen.gd" id="1_qti2c"]
+[ext_resource type="Script" path="res://Scripts/title_screen.gd" id="1_qti2c"]
 [ext_resource type="Texture2D" uid="uid://1ghhif3m41t" path="res://Assets/IMG_5544.PNG" id="2_l8we3"]
 [ext_resource type="Texture2D" uid="uid://bresix01wx7a0" path="res://Assets/ui-start.PNG" id="2_ofarl"]
 [ext_resource type="Texture2D" uid="uid://br6x3g6o4fk8p" path="res://Assets/ui-rule.PNG" id="3_cy5e6"]
@@ -37,7 +37,7 @@ offset_right = 912.0
 offset_bottom = 501.0
 
 [node name="Img5544" type="Sprite2D" parent="."]
-modulate = Color(0.980392, 0.905882, 1, 1)
+modulate = Color(0.988834, 0.94641, 1, 1)
 position = Vector2(531, 328)
 scale = Vector2(0.434667, 0.434667)
 texture = ExtResource("2_l8we3")

@@ -230,6 +230,20 @@ position = Vector2(123, -46)
 zoom = Vector2(2.36, 2.36)
 position_smoothing_enabled = true
 
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+wait_time = 8.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody2D"]
+
+[node name="DashBar" type="ProgressBar" parent="CharacterBody2D/CanvasLayer"]
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 386.0
+offset_bottom = 113.0
+scale = Vector2(0.5, 0.5)
+step = 1.0
+value = 100.0
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -297,4 +311,5 @@ autoplay = "move platform"
 [node name="Path2D" parent="." instance=ExtResource("9_hc47q")]
 position = Vector2(644, 279)
 
+[connection signal="timeout" from="CharacterBody2D/Timer" to="CharacterBody2D" method="_on_timer_timeout"]
 [connection signal="body_entered" from="kill box" to="kill box" method="_on_body_entered"]

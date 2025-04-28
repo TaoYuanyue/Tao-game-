@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://byyaionbrirep"]
+
+[ext_resource type="Texture2D" uid="uid://ltnwnn0y1t3u" path="res://icon.svg" id="1_vpwnf"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0606668, 0.0706711, -0.204367)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-0.986692, 0, 0.162603, 0, 1, 0, -0.162603, 0, -0.986692, 0, 0, -0.131347)
+texture = ExtResource("1_vpwnf")

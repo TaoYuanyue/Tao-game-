@@ -239,15 +239,22 @@ wait_time = 5.0
 [node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody2D"]
 
 [node name="DashBar" type="ProgressBar" parent="CharacterBody2D/CanvasLayer"]
-modulate = Color(0, 0, 0, 1)
-offset_left = 23.0
+modulate = Color(0.290024, 0.0353015, 0.64532, 1)
+offset_left = 22.0
 offset_top = 20.0
-offset_right = 115.0
-offset_bottom = 244.0
+offset_right = 398.0
+offset_bottom = 88.0
 scale = Vector2(0.5, 0.5)
 step = 1.0
 value = 100.0
-fill_mode = 2
+show_percentage = false
+
+[node name="Label" type="Label" parent="CharacterBody2D/CanvasLayer"]
+offset_left = 26.0
+offset_top = 59.0
+offset_right = 81.0
+offset_bottom = 82.0
+text = "Ink bar"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

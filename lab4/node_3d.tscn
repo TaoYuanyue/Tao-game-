@@ -61,7 +61,7 @@ data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0767672, 1.18401, -0.495869)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.97001, 0.074742, 0.231288, 0.227773, -0.0526806, 0.972288, 0.0848553, 0.99581, 0.0340765, 0, 4.43326, 0)
+transform = Transform3D(-0.97001, 0.0747421, 0.231289, 0.227773, -0.0526806, 0.972288, 0.0848553, 0.99581, 0.0340765, -6.13382, 6.34507, -7.73879)
 shadow_enabled = true
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="." groups=["mazes"]]

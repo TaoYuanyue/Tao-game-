@@ -10,7 +10,7 @@ size = Vector2(2783.61, 1796.02)
 script = ExtResource("1_4csm0")
 
 [node name="Enemy" type="Sprite2D" parent="."]
-modulate = Color(0.958176, 0.808377, 1, 1)
+modulate = Color(0.974405, 0.883008, 1, 1)
 position = Vector2(23.4715, 15.625)
 scale = Vector2(0.0334967, 0.0334967)
 texture = ExtResource("1_rmkkn")

@@ -69,6 +69,8 @@ Press \"WASD\" to move around.
 Press \"SPACE\" for jump.
 
 Press \"SHIFT\" to dash. If the ink bar is used out, you can't use this ability.
+
+Goal: Try to arrive at the end to get your story back! If you get hurt, the game will restart. So be careful, and good luck!
 "
 label_settings = SubResource("LabelSettings_iiiek")
 autowrap_mode = 3

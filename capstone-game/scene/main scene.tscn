@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://y3dnymj2ukk1"]
+[gd_scene load_steps=28 format=4 uid="uid://y3dnymj2ukk1"]
 
 [ext_resource type="PackedScene" uid="uid://b0na1vhpw3ak7" path="res://scene/player.tscn" id="1_0mvx3"]
 [ext_resource type="Texture2D" uid="uid://i2bseriw8h" path="res://Assets/bg3.PNG" id="1_3wx2r"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dhfk5msw8r4fq" path="res://scene/enemy.tscn" id="9_288sj"]
 [ext_resource type="Texture2D" uid="uid://341oowd0tbjc" path="res://Assets/sr25df6b08125aws3.png" id="9_exmdp"]
 [ext_resource type="PackedScene" uid="uid://d3nxpw3iu4ia7" path="res://scene/platform.tscn" id="9_raspx"]
+[ext_resource type="AudioStream" uid="uid://bhn6oxfmf254w" path="res://music/cute-music-26476.mp3" id="10_tumat"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bxubb"]
 distance = -648.0
@@ -216,6 +217,21 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ybxa"]
 size = Vector2(19, 48.375)
 
+[sub_resource type="Animation" id="Animation_c8kn0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1176, -64)]
+}
+
 [sub_resource type="Animation" id="Animation_a57rl"]
 resource_name = "new_animation"
 length = 2.0
@@ -231,21 +247,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1176, -64), Vector2(1176, -90)]
-}
-
-[sub_resource type="Animation" id="Animation_c8kn0"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1176, -64)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ywfkl"]
@@ -390,6 +391,10 @@ libraries = {
 "": SubResource("AnimationLibrary_ywfkl")
 }
 autoplay = "new_animation"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_tumat")
+autoplay = true
 
 [connection signal="timeout" from="CharacterBody2D/Timer" to="CharacterBody2D" method="_on_timer_timeout"]
 [connection signal="body_entered" from="kill box" to="kill box" method="_on_body_entered"]
